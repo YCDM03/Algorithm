@@ -1,10 +1,12 @@
-
 function solution(s) {
-    var answer = [0,0];
-    while(s.length > 1) {
-        answer[0]++;
-        answer[1] += (s.match(/0/g)||[]).length;
-        s = s.replace(/0/g, '').length.toString(2);
-    }
-    return answer;
+    let delZeroCount=0
+    let binaryCount=0
+    let vStr=s
+
+    do{
+        vStr=vStr.split("").map((e)=>{if(e!=="1"){delZeroCount++}else{return e}}).join("").length.toString(2)
+         binaryCount++
+    }while(vStr!=="1")
+
+    return [binaryCount,delZeroCount]
 }
