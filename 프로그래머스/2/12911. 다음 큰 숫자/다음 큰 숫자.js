@@ -4,7 +4,6 @@ function solution(n) {
     let answerOneCount=0
     n.toString(2).split("").forEach((e)=>{e==="0"?null:oneCount++;})
     
-    
     while(true){
     answer.toString(2).split("").forEach((e)=>{e==="0"?null:answerOneCount++;})
       if(oneCount===answerOneCount){break}
